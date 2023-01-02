@@ -1,0 +1,50 @@
+body {
+direction: rtl;
+font-family: 'vazir'!important;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none ;
+  list-style: none;
+  outline: none;
+}
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(174, 227, 209);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-fileds{
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px #333;
+  
+  width: 330px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+}
+
+
+.input-fileds input{
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: hidden;
+  direction: ltr;
+  font-size: 18px;
+  padding: 6px;
+}
+
+.input-fileds span{
+  cursor: pointer;
+  font-size: 23px;
+}

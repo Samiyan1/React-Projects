@@ -1,0 +1,39 @@
+body {
+direction: rtl;
+font-family: 'vazir'!important;
+background: linear-gradient(159deg, rgba(20,179,177,1) 0%,rgba(66,9,119,1)100%);
+height: 100vh;
+}
+  #root{
+  background: linear-gradient(159deg, rgba(20,179,177,1) 0%,rgba(66,9,119,1)100%);
+  }
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none ;
+  list-style: none;
+  outline: none;
+  font-family: 'vazir'!important;
+}
+
+.col-md-4{
+
+}
+
+textarea{
+  height: 120px !important;
+  resize: none !important;
+}
+
+
+.form-control{
+  border: none !important;
+  border-bottom: 1px solid #ced4da !important;
+}
+
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: transparent !important;
+}

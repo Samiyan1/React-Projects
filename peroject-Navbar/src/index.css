@@ -1,0 +1,124 @@
+body {
+direction: rtl;
+font-family: 'vazir'!important;
+background-color: azure;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none ;
+  list-style: none;
+  outline: none;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(105, 0, 0);
+  box-shadow: 0 0 10px rgb(117,117, 117,.5);
+  padding: 0 20px;
+  position: relative;
+}
+
+.container{
+  width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.nav-logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo .nav-toggle{
+  background-color: transparent;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 27px;
+  cursor: pointer;
+  display: none;
+  color: white;
+}
+.nav-logo img{
+  width: 75px;
+  height: 65px;
+  cursor: pointer;
+}
+.nav-links{
+  transition: all .3s ease;
+}
+
+.nav-links .list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links .list li{
+  margin: 0 10px;
+
+}
+
+.nav-links .list li a{
+  color: white;
+  font-size: 17px;
+}
+
+.nav-social{
+  display: flex;
+}
+.nav-social li {
+  margin-left: 10px;
+}
+
+.nav-social li a{
+  color: white;
+}
+@media screen and (min-width:768px){
+  .nav-links {
+    height: auto !important;
+  }
+}
+
+@media screen and (max-width : 767px){
+.nav-logo{
+  width: 100%;
+  height: 10%;
+}
+.nav-toggle{
+display: block !important;
+}
+
+.nav-links{
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 65px;
+  height: 0;
+  background-color: white;
+  overflow: hidden;
+}
+ .nav-links .list{
+  display: block;
+ }
+ .nav-links .list li {
+  padding: 15px 20px   ;
+ }
+ .nav-links .list li a {
+  color: black;
+ }
+ .nav-social{
+  display: none;
+ }
+ .active{
+  height: 30rem;
+ }
+ 
+}

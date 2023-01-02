@@ -1,0 +1,63 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+body {
+  direction: rtl;
+  font-family: 'vazir' !important;
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  background: #111;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+
+}
+
+header ul li{
+  padding: 20px 0;
+  margin-left: 20px;
+  color: #fff;
+}
+
+.wrapper{
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+
+.progressbar{
+  width: 100%;
+  height: 12px;
+  background: #999;
+  z-index: 1;
+}
+
+.progressbarMain{
+  width: 0;
+  height: 12px;
+  background: crimson;
+}
+
+
+
+.content{
+  padding: 20px 300px;
+}
+
+.content p{
+  margin-top: 100px;
+}
