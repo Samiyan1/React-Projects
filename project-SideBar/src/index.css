@@ -1,50 +1,93 @@
 body {
-direction: rtl;
-font-family: 'vazir'!important;
+  direction: rtl;
+  font-family: 'vazir' !important;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
-  text-decoration: none ;
+  text-decoration: none;
   list-style: none;
   outline: none;
 }
 
-.wrapper{
+.sidebar {
+  background-color: purple;
+  width: 300px;
   height: 100vh;
-  width: 100vw;
-  background-color: rgb(174, 227, 209);
+  position: fixed;
+  z-index: 1000;
+  padding: 50px 0;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all .3s ease-in-out ;
+
+
+}
+
+.sidebar .sidebar-header {
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
 }
 
-.input-fileds{
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 0 5px 15px #333;
-  
-  width: 330px;
-  height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 13px;
+.sidebar .sidebar-header img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
 }
 
-
-.input-fileds input{
-  height: 100%;
+.sidebar .sidebar-header .close-btn {
+  position: absolute;
+  top: 0;
+  height: 60px;
   width: 100%;
-  background-color: transparent;
-  border: hidden;
-  direction: ltr;
-  font-size: 18px;
-  padding: 6px;
+  background-color: #630263;
+  border: none;
+  font-size: 25px;
+  color: white;
 }
 
-.input-fileds span{
+.sidebar .links {
+  padding: 0 20px;
+}
+
+.sidebar .links li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .links li a svg {
+  margin-left: 10px;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: purple;
+  color:#fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
   cursor: pointer;
-  font-size: 23px;
+}
+
+.show-sidebar{
+  transform: translateX(0%);
+
 }
