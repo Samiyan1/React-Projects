@@ -1,26 +1,37 @@
 import React from 'react';
-import { Icon } from 'react-icons-kit'
-import {eye} from "react-icons-kit/feather/eye";
-import {eyeOff} from "react-icons-kit/feather/eyeOff";
 import { useState } from 'react';
+import Categories from './Categories';
+import items from './data'
+import Menu from './Menu';
+
+const allCategory = ['همه',...new Set(items.map((item)=> item.category ))]
+
 
 function App() {
-  const [type ,settype] = useState('password');
-  const [icon ,seticon] = useState(eyeOff);
 
-  const handleClick = () => {
-    settype( type === 'password' ? 'text' : 'password')
-    seticon( icon === eyeOff ? eye : eyeOff)
+  const [menuItems, setMenuItems] = useState(items);
+  const [categories, setCategory] = useState(allCategory);
+
+  const filterItem = (category) => {
+    if(category==='همه'){
+      setMenuItems(items);
+      return;
+    }
+    const newItem = items.filter((item)=>item.category === category)  
+    setMenuItems(newItem)
   }
-  
   return (
-   <div className='wrapper'>
-    <div className='input-fileds'>
-      <span onClick={handleClick}><Icon icon={icon} size={25}></Icon></span>
-      <input type={type}></input>
-      
-    </div>
-   </div>
+    <main>
+      <section className='menu section'>
+        <div className='title'>
+          <h2>محصولات ما</h2>
+          <div className='underline'></div>
+        </div>
+        <Categories filterItem={filterItem} categories={categories}/>
+        <Menu items={menuItems} />
+      </section>
+
+    </main>
   );
 }
 
