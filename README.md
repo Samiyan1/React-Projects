@@ -5,6 +5,6 @@ To see each project first with the command:
 Install the required packages then using the command
 ### npm start
 View the project in your browser.
-#### colored (atention)
+#### Atention
 Some projects (19, 18) have the rickett package, which you must use the following command to install.
 ### npm i --force

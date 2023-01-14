@@ -1,0 +1,62 @@
+body {
+  direction: rtl;
+  font-family: 'vazir' !important;
+  height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 45px;
+}
+
+#section-one {
+  background-color: brown;
+}
+
+#section-two {
+  background-color: rgb(2, 103, 38);
+}
+
+#section-three {
+  background-color: rgb(33, 2, 111);
+}
+
+#section-four {
+  background-color: rgb(181, 142, 0);
+}
+
+.to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 15px;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color:black;
+  opacity: 0;
+  transition: all.4s ease-in-out;
+}
+
+.active{
+  opacity: 1;
+}
