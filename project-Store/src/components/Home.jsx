@@ -9,12 +9,26 @@ function Home() {
     const [item, setItem] = useState(data.products);
     const [sort, setSort] = useState('asc');
     const [cartItems, setCartItems] = useState([]);
-    
+
+    const removeProducts = (item) => {
+        const exist = cartItems.find(p => item.id === p.id)
+        if (exist.qty === 1) {
+            setCartItems(
+                cartItems.filter(p => item.id !== p.id)
+            )
+        } else {
+            setCartItems(
+                cartItems.map(p => item.id === p.id ? { ...exist, qty: exist.qty - 1 } : p)
+
+            )
+        }
+
+    }
     const brandsName = () => {
         let ar = [];
         item.map((brand) => {
             let ar2 = brand.availableBrand[0]
-           return ar = [...ar,ar2]
+            return ar = [...ar, ar2]
         })
         let setItem = new Set(ar)
         let ary3 = [...setItem]
@@ -24,18 +38,26 @@ function Home() {
     const [brands] = useState(brandsName());
 
     const changeBrand = (e) => {
-        if(e.target.value === 'همه'){
+        if (e.target.value === 'همه') {
             setItem(data.products)
-        }else{
-            setItem(data.products.filter((item)=>{
-                return item.availableBrand.indexOf(e.target.value) >= 0 
+        } else {
+            setItem(data.products.filter((item) => {
+                return item.availableBrand.indexOf(e.target.value) >= 0
             }))
         }
     }
 
-    const addCart = (item) => {
-        setCartItems([...cartItems, {...item}])
-        console.log(cartItems)
+    const addProducts = (item) => {
+        const exist = cartItems.find(p => item.id === p.id)
+        if (exist) {
+            setCartItems(
+                cartItems.map(p => item.id === p.id ? { ...exist, qty: exist.qty + 1 } : p)
+
+            )
+        } else {
+            setCartItems([...cartItems, { ...item, qty: 1 }])
+        }
+
     }
 
     const changeSort = (e) => {
@@ -58,16 +80,23 @@ function Home() {
             <main>
                 <div className="content">
                     <div className="main">
-                        <Filter count={item.length} changeSort={changeSort} changeBrand={changeBrand} brands={brands} />
-                        <Products item={item} addCart={addCart}/>
+                        <Filter
+                            count={item.length}
+                            changeSort={changeSort}
+                            changeBrand={changeBrand}
+                            brands={brands} />
+                        <Products item={item} addProducts={addProducts} />
                     </div>
                     <div className="sidebar">
-                        <Cart />
+                        <Cart
+                            cartItems={cartItems}
+                            removeProducts={removeProducts} />
                     </div>
                 </div>
             </main>
             <footer>
-                طراحی و توسعه توسط من و تو.
+              
+                <p>samiyan studio</p>
             </footer>
         </div>
     )
