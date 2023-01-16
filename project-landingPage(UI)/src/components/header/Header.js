@@ -7,11 +7,11 @@ const Header = () => {
     <section id="header">
       <div className="container header">
         <div className="header-right">
-          <h1>
+          <h5>
             <span>پیشرو در سطح جهانی</span>
             <span>امنیت در همه‌ی پلتفرم‌ها</span>
             <span>سیستم پیام رسانی</span>
-          </h1>
+          </h5>
           <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
           <div className="header-btn">
             <a href="#" className="btn btn-dark">بیاین شروع کنیم</a>
@@ -24,7 +24,7 @@ const Header = () => {
       </div>
 
       <div className="floating-icon">
-        <a href="">
+        <a href="#features">
           <BsMouse color={"#fff"} size={25} className="mouse" />
         </a>
       </div>
