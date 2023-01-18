@@ -1,0 +1,105 @@
+#subscribe{
+     background: url(../../assets/subscribe-bg.png);
+     text-align: center;
+     color: #fff;
+     background-size: cover;
+     background-attachment: fixed;
+}
+
+.subscribe h2{
+     font-size: 3rem;
+     font-weight: 300;
+     padding-bottom: 3rem;
+}
+
+form>*{
+     font-family: 'vazir';
+}
+
+form button{
+     background: var(--form-button);
+     border: 2px solid var(--form-button);
+     padding: 1rem;
+     color: #fff;
+     border-radius: 0 5px 5px 0;
+     -webkit-border-radius: 0 5px 5px 0;
+     -moz-border-radius: 0 5px 5px 0;
+     -ms-border-radius: 0 5px 5px 0;
+     -o-border-radius: 0 5px 5px 0;
+     border: 1px solid #777;
+     cursor: pointer;
+}
+
+form input{
+     padding: 1rem;
+     width: 400px;
+     border-radius: 5px 0 0 5px;
+     -webkit-border-radius: 5px 0 0 5px;
+     -moz-border-radius: 5px 0 0 5px;
+     -ms-border-radius: 5px 0 0 5px;
+     -o-border-radius: 5px 0 0 5px;
+     border: 1px solid #777;
+     background: transparent;
+     color: #fff;
+     direction: ltr;
+}
+
+.socials{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 3rem;
+}
+
+.socials .social-icon{
+     width: 40px;
+     height: 40px;
+     border: 1px solid #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+     margin: 0 1.5rem;
+     cursor: pointer;
+}
+
+.socials .social-icon svg{
+     font-size: 1.7rem;
+}
+
+@media screen and (max-width: 600px) {
+     form input{
+          width: 100%;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+}
+     form button {
+          width: 100%;
+          margin-bottom: 2rem;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+}
+
+
+}
+
+@media screen and (max-width: 400px) {
+     .socials{
+          flex-wrap: wrap;
+          justify-content: space-between;
+     }
+     .socials .social-icon{
+          width: 20%;
+          margin: 0;
+     }
+}
