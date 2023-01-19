@@ -2,11 +2,21 @@ import React from 'react';
 import phoneHeader from '../../assets/phone-header-bg.png';
 import './Header.css';
 import { BsMouse } from "react-icons/bs";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 const Header = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration:1000
+    });
+  }, []);
+
   return (
     <section id="header">
       <div className="container header">
-        <div className="header-right">
+        <div className="header-right" data-aos="fade-right">
           <h5>
             <span>پیشرو در سطح جهانی</span>
             <span>امنیت در همه‌ی پلتفرم‌ها</span>
@@ -18,7 +28,7 @@ const Header = () => {
             <a href="#" className="btn btn-light">اطلاعات بیشتر</a>
           </div>
         </div>
-        <div className="header-left">
+        <div className="header-left" data-aos="fade-left">
           <img src={phoneHeader} alt="" />
         </div>
       </div>
