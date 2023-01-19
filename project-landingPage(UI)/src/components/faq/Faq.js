@@ -1,9 +1,14 @@
 import React from 'react';
 import { MdOutlineLibraryBooks } from "react-icons/md";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { questions } from './data.js';
+import './Faq.css';
+import Question from './Question.js';
+
 
 function Faq() {
+
+
+
   return (
     <section id="faq">
       <div className="container faq">
@@ -16,17 +21,11 @@ function Faq() {
         <div className="questions">
           {
             questions && questions.map((question) =>
-              <div className="question" key={question.id}>
-              <div className="question-title">
-                <h4>{question.title}</h4>
-                <button>
-                  <AiOutlinePlus />
-                </button>
-              </div>
-              <div className="question-answer">
-                <p>{question.answer}</p>
-              </div>
-            </div>
+             <Question
+              key={question.id}
+              title={question.title}
+              answer={question.answer}
+             />
             )
           }
         </div>

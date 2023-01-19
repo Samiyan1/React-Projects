@@ -1,0 +1,110 @@
+#footer{
+     background: var(--dark-blue);
+     color: #fff;
+}
+
+.footer{
+     display: flex;
+     justify-content: space-between;
+}
+
+.quick-access{
+     width: 20%;
+}
+
+.footer h4{
+     font-size: 1.6rem;
+     font-weight: 500;
+     margin-bottom: 1rem;
+}
+
+.footer .footer-links{
+     display: flex;
+     flex-direction: column;
+}
+
+.footer .footer-links a{
+     font-size: 1.2rem;
+}
+
+.support{
+     width: 20%;
+}
+
+.contact{
+     width: 25%;
+}
+
+.contact p{
+     font-size: 1.2rem;
+}
+
+.footer-logo{
+     width: 25%;
+}
+
+.footer-logo img{
+     width: 120px;
+     height: 120px;
+}
+
+.footer-logo img:hover{
+     background-color: orangered; 
+     border-radius: 60px;
+     cursor: pointer;
+}
+
+a:hover{
+color: orangered;
+}
+
+
+
+@media screen and (max-width: 600px) {
+     .footer{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+     }
+     
+     .quick-access{
+          width: 50%;
+          margin-bottom: 2rem;
+     }
+     .support{
+          width: 50%;
+          margin-bottom: 2rem;
+     }
+     
+     .contact{
+          width: 50%;
+          margin-bottom: 2rem;
+     }
+     
+     .footer-logo{
+          width: 50%;
+          margin-bottom: 2rem;
+     }  
+}
+
+@media screen and (max-width: 400px) {
+    
+     .quick-access{
+          width: 100%;
+          margin-bottom: 2rem;
+     }
+     .support{
+          width: 100%;
+          margin-bottom: 2rem;
+     }
+     
+     .contact{
+          width: 100%;
+          margin-bottom: 2rem;
+     }
+     
+     .footer-logo{
+          width: 100%;
+          margin-bottom: 2rem;
+     }  
+}
