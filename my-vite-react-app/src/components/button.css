@@ -1,0 +1,20 @@
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 11.4177px 27.7286px;
+    gap: 3.26px;
+
+    position: absolute;
+    width: 327px;
+    height: 64px;
+    left: 24px;
+    top: 700px;
+
+    /* SUNRISE/Blue Primary */
+
+    background: #2FD1C5;
+    box-shadow: 0px 14px 23px rgba(28, 37, 44, 0.08);
+    border-radius: 8px;
+}
